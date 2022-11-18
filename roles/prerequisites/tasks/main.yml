@@ -10,7 +10,13 @@
       - libguestfs-tools
       - python3-libvirt
 
+- name: Add user to libvirt group
+  ignore_errors: yes
+  user:
+    name: "{{ ansible_user }}"
+    group: libvirt
+
 - name: Install libvirt python packages
   pip:
     name:
-      - libvirt
+      - libvirt-python
