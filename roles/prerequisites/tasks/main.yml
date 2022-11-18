@@ -11,6 +11,7 @@
       - python3-libvirt
 
 - name: Add user to libvirt group
+  become: yes
   ignore_errors: yes
   user:
     name: "{{ ansible_env.USER }}"
