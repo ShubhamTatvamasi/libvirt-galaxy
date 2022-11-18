@@ -7,7 +7,8 @@
     # - role: create_vm_qemu_image
     # - role: generate_cloud_init_iso
     # - role: create_vm
-    - role: vm_ip
+    # - role: vm_ip
+    # - role: delete_vm
     # - role: kvm_provision
     # - role: list
   vars:

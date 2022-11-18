@@ -1,0 +1,4 @@
+- name: Delete Ubuntu VM
+  community.libvirt.virt:
+    name: "{{ vm_name }}"
+    command: destroy
