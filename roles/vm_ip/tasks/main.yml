@@ -9,7 +9,8 @@
   set_fact:
     network_info: "{{ net_info.networks.default.dhcp_leases }}"
 
-- debug:
+- name: VM IPs
+  debug:
     msg: "{{ item }}"
   loop: "{{ network_info | json_query(ip_query) }}"
   vars:
