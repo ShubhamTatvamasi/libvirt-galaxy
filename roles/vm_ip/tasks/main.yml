@@ -1,5 +1,6 @@
 ---
 - name: Get network info
+  become: yes
   community.libvirt.virt_net:
     command: info
   register: net_info
