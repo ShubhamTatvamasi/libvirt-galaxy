@@ -3,6 +3,7 @@
   connection: local
   hosts: localhost
   roles:
+    - role: prerequisites
     - role: download_ubuntu
     - role: cloud_init
     - role: create_vm_qemu_image

@@ -1,0 +1,16 @@
+---
+- name: Install libvirt
+  become: yes
+  apt:
+    update_cache: yes
+    pkg:
+      - python3-pip
+      - qemu-kvm
+      - libvirt-daemon-system
+      - libguestfs-tools
+      - python3-libvirt
+
+- name: Install libvirt python packages
+  pip:
+    name:
+      - libvirt
