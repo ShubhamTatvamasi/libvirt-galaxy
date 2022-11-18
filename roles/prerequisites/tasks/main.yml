@@ -20,6 +20,7 @@
     group: libvirt
 
 - name: Install libvirt python packages
+  become: yes
   pip:
     name:
       - libvirt-python
