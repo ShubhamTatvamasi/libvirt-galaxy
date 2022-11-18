@@ -9,6 +9,7 @@
       - libvirt-daemon-system
       - libguestfs-tools
       - python3-libvirt
+      - genisoimage
 
 - name: Add user to libvirt group
   become: yes
