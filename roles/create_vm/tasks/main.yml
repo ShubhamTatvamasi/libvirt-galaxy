@@ -1,6 +1,11 @@
 ---
+- name: List all VMs
+  community.libvirt.virt:
+    command: list_vms
+  register: all_vms
+
 - name: Create Ubuntu VM
-  # become: yes
+  when: "vm_name not in all_vms.list_vms"
   command: |
     virt-install
       --name={{ vm_name }}

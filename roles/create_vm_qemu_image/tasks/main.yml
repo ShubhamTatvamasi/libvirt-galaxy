@@ -1,5 +1,11 @@
 ---
+- name: Check if VM image exists
+  stat:
+    path: "{{ libvirt_pool_dir }}/{{ vm_name }}.img"
+  register: vm_image_result
+
 - name: Create QEMU VM Image
+  when: not vm_image_result.stat.exists
   become: yes
   command: |
     qemu-img create -b {{ ubuntu_image_path }} -f qcow2 -F qcow2

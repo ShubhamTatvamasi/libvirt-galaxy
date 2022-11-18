@@ -1,3 +1,4 @@
+---
 - name: Check if ubuntu image exists
   stat:
     path: "{{ ubuntu_image_path }}"
