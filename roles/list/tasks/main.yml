@@ -4,5 +4,5 @@
     command: list_vms
   register: all_vms
 
-- debug: 
+- debug:
     var: all_vms.list_vms

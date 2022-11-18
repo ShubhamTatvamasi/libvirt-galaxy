@@ -1,0 +1,4 @@
+---
+libvirt_pool_dir: "/var/lib/libvirt/images"
+ubuntu_version: jammy
+ubuntu_image: "{{ ubuntu_version }}-server-cloudimg-amd64.img"

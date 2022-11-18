@@ -1,0 +1,11 @@
+- name: Check if ubuntu image exists
+  stat:
+    path: "{{ libvirt_pool_dir }}/{{ ubuntu_image }}"
+  register: image_result
+
+- name: Download Ubuntu image
+  when: not image_result.stat.exists
+  become: yes
+  get_url:
+    url: https://cloud-images.ubuntu.com/{{ ubuntu_version }}/current/{{ ubuntu_image }}
+    dest: "{{ libvirt_pool_dir }}/{{ ubuntu_image }}"
