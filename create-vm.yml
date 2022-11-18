@@ -4,7 +4,8 @@
   hosts: localhost
   roles:
     # - role: download_ubuntu
-    - role: create_vm_qemu_image
+    # - role: create_vm_qemu_image
+    - role: generate_cloud_init_iso
     # - role: kvm_provision
     # - role: list
   vars:

@@ -1,0 +1,8 @@
+---
+- name: Generate Cloud Init ISO
+  become: yes
+  command: |
+    genisoimage -output {{ libvirt_pool_dir }}/cidata.iso \
+      -V cidata -r -J \
+      roles/generate_cloud_init_iso/files/user-data \
+      roles/generate_cloud_init_iso/files/meta-data
