@@ -10,6 +10,7 @@
       - libguestfs-tools
       - python3-libvirt
       - genisoimage
+      - virtinst
 
 - name: Add user to libvirt group
   become: yes
