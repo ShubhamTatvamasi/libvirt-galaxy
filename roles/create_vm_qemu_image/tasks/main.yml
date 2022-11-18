@@ -1,0 +1,7 @@
+---
+- name: Create QEMU VM Image
+  become: yes
+  command: |
+    qemu-img create -b {{ ubuntu_image_path }} -f qcow2 -F qcow2 \
+      {{ libvirt_pool_dir }}/{{ vm_name }}.img \
+      {{ disk_size }}

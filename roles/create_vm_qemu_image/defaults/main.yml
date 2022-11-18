@@ -3,3 +3,5 @@ libvirt_pool_dir: "/var/lib/libvirt/images"
 ubuntu_version: jammy
 ubuntu_image: "{{ ubuntu_version }}-server-cloudimg-amd64.img"
 ubuntu_image_path: "{{ libvirt_pool_dir }}/{{ ubuntu_image }}"
+disk_size: 10G
+vm_name: ubuntu

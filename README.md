@@ -5,7 +5,7 @@ Install libvirt collection:
 ansible-galaxy collection install community.libvirt
 ```
 
-List all VMs:
+Create new VM:
 ```bash
-ansible-playbook list-vms.yml
+ansible-playbook create-vm.yml
 ```
