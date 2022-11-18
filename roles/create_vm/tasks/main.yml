@@ -1,0 +1,15 @@
+---
+- name: Create Ubuntu VM
+  # become: yes
+  command: |
+    virt-install
+      --name={{ vm_name }}
+      --memory={{ vm_ram_mb }}
+      --vcpus={{ vm_vcpus }}
+      --import
+      --disk path={{ libvirt_pool_dir }}/{{ vm_name }}.img,format=qcow2
+      --disk path={{ libvirt_pool_dir }}/cidata.iso,device=cdrom
+      --os-variant=ubuntu22.04
+      --network network={{ vm_net }},model=virtio
+      --graphics vnc,listen=0.0.0.0
+      --noautoconsole

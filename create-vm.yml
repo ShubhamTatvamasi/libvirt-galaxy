@@ -5,7 +5,9 @@
   roles:
     # - role: download_ubuntu
     # - role: create_vm_qemu_image
-    - role: generate_cloud_init_iso
+    # - role: generate_cloud_init_iso
+    # - role: create_vm
+    - role: vm_ip
     # - role: kvm_provision
     # - role: list
   vars:

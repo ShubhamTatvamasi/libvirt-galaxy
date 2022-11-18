@@ -1,0 +1,15 @@
+---
+- name: Get network info
+  community.libvirt.virt_net:
+    command: info
+  register: net_info
+
+- name: List Networks
+  set_fact:
+    network_info: "{{ net_info.networks.default.dhcp_leases }}"
+
+- debug:
+    msg: "{{ item }}"
+  loop: "{{ network_info | json_query(ip_query) }}"
+  vars:
+    ip_query: "[*].{hostname: hostname, ipaddr: ipaddr}"
