@@ -13,7 +13,7 @@
 - name: Add user to libvirt group
   ignore_errors: yes
   user:
-    name: "{{ ansible_user }}"
+    name: "{{ ansible_env.USER }}"
     group: libvirt
 
 - name: Install libvirt python packages
