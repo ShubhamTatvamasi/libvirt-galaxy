@@ -1,0 +1,8 @@
+---
+- name: List all VMs
+  community.libvirt.virt:
+    command: list_vms
+  register: all_vms
+
+- debug: 
+    var: all_vms.list_vms

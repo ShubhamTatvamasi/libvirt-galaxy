@@ -1,0 +1,6 @@
+---
+- name: Create Ubuntu VM
+  hosts: all
+  roles:
+    - role: kvm_provision
+    - role: list
