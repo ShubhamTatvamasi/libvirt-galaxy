@@ -4,6 +4,7 @@ Create new VM:
 ```bash
 ansible-playbook create-vm.yml
 ```
+> add `-K` flag for providing sudo password.
 
 ### Ansible Setup
 
