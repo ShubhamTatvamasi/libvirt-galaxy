@@ -11,7 +11,7 @@
   command: |
     virt-install
       --name={{ vm_name }}
-      --memory={{ vm_ram_mb }}
+      --memory={{ vm_ram_gb * 1024 }}
       --vcpus={{ vm_vcpus }}
       --import
       --disk path={{ libvirt_pool_dir }}/{{ vm_name }}.img,format=qcow2

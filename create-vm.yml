@@ -13,5 +13,5 @@
   vars:
     vm_name: ubuntu
     vm_vcpus: 2
-    vm_ram_mb: 2048
+    vm_ram_gb: 2
     disk_size: 10G
