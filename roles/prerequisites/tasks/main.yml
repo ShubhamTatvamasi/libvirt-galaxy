@@ -17,7 +17,8 @@
   ignore_errors: yes
   user:
     name: "{{ ansible_env.USER }}"
-    group: libvirt
+    groups: libvirt
+    append: yes
 
 - name: Install libvirt python packages
   become: yes
