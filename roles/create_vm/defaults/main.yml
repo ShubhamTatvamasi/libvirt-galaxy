@@ -1,6 +1,6 @@
 ---
 libvirt_pool_dir: "/var/lib/libvirt/images"
-ubuntu_image: jammy-server-cloudimg-amd64.img
+ubuntu_image: "{{ ubuntu_version }}-server-cloudimg-amd64.img"
 vm_name: ubuntu
 vm_vcpus: 2
 vm_ram_gb: 1
