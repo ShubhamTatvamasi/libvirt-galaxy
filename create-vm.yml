@@ -12,7 +12,7 @@
     # - role: delete_vm
   vars:
     vm_name: ubuntu
-    vm_vcpus: 2
-    vm_ram_gb: 2
+    vm_vcpus: 1
+    vm_ram_gb: 1
     disk_size: 10G
     ubuntu_version: noble
